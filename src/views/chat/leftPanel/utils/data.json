@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Alice Smith",
+    "profilePicture": "https://example.com/path/to/alice-profile.jpg",
+    "lastMessage": "Hey, how are you?",
+    "timestamp": "2023-03-06T14:48:00.000Z"
+  },
+  {
+    "id": 2,
+    "name": "Bob Johnson",
+    "profilePicture": "https://example.com/path/to/bob-profile.jpg",
+    "lastMessage": "Let's meet tomorrow!",
+    "timestamp": "2023-03-06T09:22:00.000Z"
+  },
+  {
+    "id": 3,
+    "name": "Charlie Davis",
+    "profilePicture": "https://example.com/path/to/charlie-profile.jpg",
+    "lastMessage": "Did you get the documents?",
+    "timestamp": "2023-03-05T17:30:00.000Z"
+  },
+  {
+    "id": 4,
+    "name": "Diana Brooks",
+    "profilePicture": "https://example.com/path/to/diana-profile.jpg",
+    "lastMessage": "Thanks for the help!",
+    "timestamp": "2023-03-05T11:15:00.000Z"
+  }
+]
