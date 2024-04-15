@@ -1,0 +1,96 @@
+[
+  {
+    "id": 1,
+    "type": "message",
+    "sender": "user",
+    "message": "Good morning!",
+    "timestamp": "2023-03-05T08:00:00.000Z"
+  },
+  {
+    "id": 2,
+    "type": "message",
+    "sender": "other",
+    "message": "Morning! How are you today?",
+    "timestamp": "2023-03-05T08:05:00.000Z"
+  },
+  {
+    "id": 3,
+    "type": "dateSeparator",
+    "date": "March 5, 2023"
+  },
+  {
+    "id": 4,
+    "type": "message",
+    "sender": "user",
+    "message": "Doing well, thanks! Have you had breakfast yet?",
+    "timestamp": "2023-03-05T09:00:00.000Z"
+  },
+  {
+    "id": 5,
+    "type": "message",
+    "sender": "other",
+    "message": "Yes, just had some toast and coffee. What about you?",
+    "timestamp": "2023-03-05T09:15:00.000Z"
+  },
+  {
+    "id": 6,
+    "type": "message",
+    "sender": "user",
+    "message": "Just about to make some eggs. Want to join?",
+    "timestamp": "2023-03-05T09:30:00.000Z"
+  },
+  {
+    "id": 7,
+    "type": "message",
+    "sender": "other",
+    "message": "Sounds good! I'll be there in 15.",
+    "timestamp": "2023-03-05T09:45:00.000Z"
+  },
+  {
+    "id": 8,
+    "type": "dateSeparator",
+    "date": "March 6, 2023"
+  },
+  {
+    "id": 9,
+    "type": "message",
+    "sender": "user",
+    "message": "Yesterday was fun!",
+    "timestamp": "2023-03-06T10:00:00.000Z"
+  },
+  {
+    "id": 10,
+    "type": "message",
+    "sender": "other",
+    "message": "Definitely! We should do it again soon.",
+    "timestamp": "2023-03-06T10:10:00.000Z"
+  },
+  {
+    "id": 11,
+    "type": "message",
+    "sender": "user",
+    "message": "How's your morning going?",
+    "timestamp": "2023-03-06T10:30:00.000Z"
+  },
+  {
+    "id": 12,
+    "type": "message",
+    "sender": "other",
+    "message": "Pretty busy. Got a lot of work to catch up on.",
+    "timestamp": "2023-03-06T10:45:00.000Z"
+  },
+  {
+    "id": 13,
+    "type": "message",
+    "sender": "user",
+    "message": "Let me know if you need any help.",
+    "timestamp": "2023-03-06T11:00:00.000Z"
+  },
+  {
+    "id": 14,
+    "type": "message",
+    "sender": "other",
+    "message": "Will do, thanks!",
+    "timestamp": "2023-03-06T11:15:00.000Z"
+  }
+]
