@@ -2,21 +2,39 @@ import { Flex } from "@chakra-ui/react";
 import LeftPanel from "./leftPanel/LeftPanel";
 import RightPanel from "./rightPanel/RightPanel";
 import { useEffect } from "react";
-import { socket } from "../../socket/SocketContext";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
-import { devUserID } from "../../api";
+import { useAuthContext } from "../../context/AuthContext";
+import { setAuthToken } from "../../api";
+import { useNavigate } from "react-router-dom";
+import { useSocket } from "../../socket/SocketContext";
 
 export default function Chat() {
   const { setItem } = useLocalStorage();
+  const { authUser } = useAuthContext();
+  const { socket } = useSocket();
+  const navigate = useNavigate();
+
+  // console.log("<= authUser", authUser);
+
+  const loginUserAction = (authUser) => {
+    if (!authUser || !authUser?.token) {
+      return navigate("/login");
+    }
+    setAuthToken(authUser?.token || null);
+  };
 
   useEffect(() => {
-    socket.connect();
-    setItem("chatAppUser", devUserID);
-    return () => {
-      socket.disconnect();
-    };
-    // eslint-disable-next-line
-  }, []);
+    loginUserAction(authUser);
+  }, [authUser]);
+
+  useEffect(() => {
+    if (socket) {
+      // Cleanup listeners when component unmounts
+      return () => {
+        socket.off("message");
+      };
+    }
+  }, [socket]);
 
   return (
     <Flex w="100%" h="100%">

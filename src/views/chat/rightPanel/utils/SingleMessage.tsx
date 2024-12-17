@@ -1,6 +1,7 @@
 import { Flex, Text } from "@chakra-ui/react";
 import { format } from "date-fns";
 import _ from "lodash";
+import { useAuthContext } from "../../../../context/AuthContext";
 
 type SingleMessageProps = {
   message: string;
@@ -11,13 +12,17 @@ type SingleMessageProps = {
 const SingleMessage: React.FC<SingleMessageProps> = ({ messageObject }) => {
   // console.log("<= SingleMessage.tsx ", messageObject);
 
-  if(_.isEmpty(messageObject)) return null;
+  if (_.isEmpty(messageObject)) return null;
 
-  const loggedInUser = JSON.parse(localStorage.getItem("chatAppUser")) || "";
+  const { authUser } = useAuthContext();
+
+  // console.log(authUser);
+
+  const loggedInUser = authUser?.id || "";
 
   const currentUsersMessage =
     messageObject.sender == loggedInUser ? true : false;
-
+    
   const messageTime = format(messageObject?.createdAt, "HH:mm a");
 
   return (

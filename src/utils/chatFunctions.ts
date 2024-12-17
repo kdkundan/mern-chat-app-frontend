@@ -18,15 +18,16 @@ export const getChatName = ({
   singleChat,
   isSelectedChat = false,
 }: GetChatNameParams): string => {
-
   // console.log("<= getChatName", userID, chats, singleChat, isSelectedChat);
-  
-  if (isSelectedChat && !_.isEmpty(singleChat)) return singleChat?.name || "isSelectedChat false";
 
-  if (_.isEmpty(chats) ) return "Empty Chat";
+  if (isSelectedChat && !_.isEmpty(singleChat))
+    return singleChat?.name || "isSelectedChat false";
 
+  if (_.isEmpty(chats)) return "Empty Chat";
 
-  const chat = chats?.find((chat) => chat?.id == userID);
+  const chat = chats?.find((chat) => chat?.id !== userID);
+
+  // console.log("<= getChatName chat", userID, chat);
 
   return chat?.name || "NA";
 };
